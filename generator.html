@@ -233,12 +233,12 @@
             <span class="flex-spread-evenly flex-align-vertically menu-setting has-tool-tip">
               <label for="map-sizes">Map Size</label>
               <select name="map-sizes" id="map-sizes">
-                <option value="8192x4096">8192x4096</option>
-                <option value="4096x2048">4096x2048</option>
+                <option value="16384x7168">16384x7168</option>
+                <option value="7168x2048">7168x2048</option>
                 <option value="2048x1024">2048x1024</option>
                 <option value="1024x512">1024x512</option>
               </select>
-              <span class="tool-tip">Map Size refers to the ultimate size of your generated map. For example, the vanilla map is 8192x4096 pixels.</span>
+              <span class="tool-tip">Map Size refers to the ultimate size of your generated map. For example, the vanilla map is 16384x7168 pixels.</span>
             </span>
             <span class="flex-spread-evenly flex-align-vertically menu-setting has-tool-tip">
               <label for="generator-resolution">Resolution</label>
@@ -246,10 +246,10 @@
                 <option value="512x256">512x256</option>
                 <option value="1024x512">1024x512</option>
                 <option value="2048x1024">2048x1024</option>
-                <option value="4096x2048">4096x2048</option>
-                <option value="8192x4096">8192x4096</option>
+                <option value="7168x2048">7168x2048</option>
+                <option value="16384x7168">16384x7168</option>
               </select>
-              <span class="tool-tip">Generator resolution is the underlying size of your generated map data. If resolution is less than map size, a single cell corresponds to multiple pixels on the ultimate map. For example, a 512x256 resolution with a 8192x4096 map size means that each cell in the generator corresponds to a 16x16 square of the generated map. The lower the resolution, the blockier your results. The higher the resolution, the lower the generator's performance.</span>
+              <span class="tool-tip">Generator resolution is the underlying size of your generated map data. If resolution is less than map size, a single cell corresponds to multiple pixels on the ultimate map. For example, a 512x256 resolution with a 16384x7168 map size means that each cell in the generator corresponds to a 16x16 square of the generated map. The lower the resolution, the blockier your results. The higher the resolution, the lower the generator's performance.</span>
             </span>
             <span class="flex-spread-evenly flex-align-vertically menu-setting has-tool-tip">
               <label for="elevation-to-heightmap">Elevation to Heightmap Divider:</label>
@@ -263,22 +263,22 @@
           <div class="menu-section-content menu-hideable-area menu-setting">
             <span class="flex-spread-evenly flex-align-vertically has-tool-tip">
               <label for="equatorSlider" class="slider-label" debounce="True">Equator</label>
-              <input type="number" id="equatorSlider" min="0" max="8192" value="4096" step="1" oninput="equatorChange()">
+              <input type="number" id="equatorSlider" min="0" max="16384" value="7168" step="1" oninput="equatorChange()">
               <span class="tool-tip">How many pixels from the top of the canvas is the equator?</span>
             </span>
             <span class="flex-spread-evenly flex-align-vertically has-tool-tip">
               <label for="tropicalUpper">Tropical</label>
-              <input type="number" id="tropicalUpper" class="climateChanger" min="0" max="4096" value="1007" oninput="limitAdjuster()">
+              <input type="number" id="tropicalUpper" class="climateChanger" min="0" max="7168" value="1007" oninput="limitAdjuster()">
               <span class="tool-tip">What Y distance from the equator (black line on color map) does the tropical climate zone end?</span>
             </span>
             <span class="flex-spread-evenly flex-align-vertically menu-setting has-tool-tip">
               <label for="subTropicalUpper">Sub-Tropical</label>
-              <input type="number" id="subTropicalUpper" class="climateChanger" min="0" max="4096" value="1520" oninput="limitAdjuster()">
+              <input type="number" id="subTropicalUpper" class="climateChanger" min="0" max="7168" value="1520" oninput="limitAdjuster()">
               <span class="tool-tip">What Y distance from the equator (black line on color map) does the subtropical climate zone end?</span>
             </span>
             <span class="flex-spread-evenly flex-align-vertically menu-setting has-tool-tip">
               <label for="temperateUpper">Temperate</label>
-              <input type="number" id="temperateUpper" class="climateChanger" min="0" max="4096" value="2865" oninput="limitAdjuster()">
+              <input type="number" id="temperateUpper" class="climateChanger" min="0" max="7168" value="2865" oninput="limitAdjuster()">
               <span class="tool-tip">What Y distance from the equator (black line on color map) does the temperate climate zone end? The cold zone takes up the remainder.</span>
             </span>
           </div>
@@ -724,7 +724,7 @@
             <p class="main-landing-text">5. Random Generation: Our goal is to create a generator that allows deep generation of history and lore to provide something more than a map to play on and randomly generated cultures and titles to play with. We've made great progress on this goal recently, but those developments are not camera-ready for this initial Alpha release. Alpha 0.1 maintains the mostly random distributions you might have seen in previous map releases.</p>
         
             <p class="main-landing-heading">How You Can Help</p>
-            <p class="main-landing-text">We invite you to join the community on <a href="https://discord.gg/eemRxbCUX3">Discord</a>, share suggestions, report bugs, and contribute to development either through Discord or <a href="https://github.com/ck2rpg/ck2rpg.github.io">Github</a>.</p>
+            <p class="main-landing-text">We invite you to join the community on <a href="https://discord.gg/eemRxbCUX3">Discord</a>, share suggestions, report bugs, and contribute to development either through Discord or <a href="https://github.com/ck2rpg/ahhiyawa.github.io">Github</a>.</p>
         
             <p class="main-landing-text">Thank you for being a part of this early stage of the Procedural Map Generator. We are committed to creating a robust tool that enhances your Crusader Kings 3 experience. Stay tuned for updates.</p>
         
@@ -799,7 +799,7 @@
             <p class="main-landing-text">Initial Noise Solution</p>
             <p class="main-landing-heading">Alpha 0.18.0 Release</p>
             <p class="main-landing-text">
-              Template Change: I uploaded a noise-based map to the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3320451649">workshop</a> and <a href="https://mods.paradoxplaza.com/mods/88801/Any">Paradox Mods</a>. I suggest using it or the (Not) Afria map for your new template. This avoids the bug, mentioned in previous updates, causing larger than 4096x2048 maps to crash for some users.
+              Template Change: I uploaded a noise-based map to the <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3320451649">workshop</a> and <a href="https://mods.paradoxplaza.com/mods/88801/Any">Paradox Mods</a>. I suggest using it or the (Not) Afria map for your new template. This avoids the bug, mentioned in previous updates, causing larger than 7168x2048 maps to crash for some users.
               Feature: Added a "Random Map" button to the top right of the generator screen. When you click on it, it will use simplex noise to produce a map. The current approach is based on hotspots and noise. Customization options will be added in the future.<br>
               Feature: When you change resolutions, instead of running a spread process to generate a new map, it will runt he random map function discussed above. This will address the spreading lines with only ocean that you often see on resolution change.<br>
               Note: The generated "Random Maps" currently do not play nice with the "Spread" process. I suggest using other editing functions.<br>
@@ -1072,7 +1072,7 @@
             <p class="main-landing-text">Introduced generator resolution!</p>
             <p class="main-landing-heading">0.3.0 Change Log</p>
             <p class="main-landing-text">
-              -Feature: Select from multiple generator resolutions. Fair warning that higher resolutions are resource intensive and can lead to out of memory errors. I am working on solutions to this. I'm currently able to run a 4,096x2048 res 8192x4096 map with 32GB ram.<br>
+              -Feature: Select from multiple generator resolutions. Fair warning that higher resolutions are resource intensive and can lead to out of memory errors. I am working on solutions to this. I'm currently able to run a 4,096x2048 res 16384x7168 map with 32GB ram.<br>
               -Feature: Added the ability to modify heightmap imports by multiplying, dividing, or adding to base import on import.<br>
               -Bug Fix: Fixed brush indicator bug. Brush indicator now matches even after scaling.<br>
               -Bug Fix: Tooltips now work correctly and appear directly above tooltipped features.<br>
@@ -1083,7 +1083,7 @@
             <p class="main-landing-text">Map Sizes!</p>
             <p class="main-landing-heading">0.2.0 Change Log</p>
             <p class="main-landing-text">
-              -Feature: Select from 8192x4096, 4096x2048, 2048x1024, and 1024x512 map sizes.<br>
+              -Feature: Select from 16384x7168, 7168x2048, 2048x1024, and 1024x512 map sizes.<br>
             </p>
     
             <p class="text-intro">Alpha 0.1.5 Release</p>

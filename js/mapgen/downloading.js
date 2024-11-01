@@ -126,7 +126,7 @@ function drawAndDownload(type, filename, callback) {
       world.drawingType = "rivermap";
       if (world.width === settings.width && world.height === settings.height) {
         rerunRivers()
-      } else if (world.width === 512 && world.height === 256 && settings.width === 8192 && settings.height === 4096) {
+      } else if (world.width === 512 && world.height === 256 && settings.width === 16384 && settings.height === 7168) {
         world.drawingType = "rivermapLowRes"
         riversFromHighPoints()
         drawWorld()

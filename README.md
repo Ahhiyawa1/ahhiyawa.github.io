@@ -2,7 +2,7 @@
 
 Welcome to the CK3 Procedural Map Generator project! This browser-based tool is designed to help you create custom, procedurally generated maps and related files for Crusader Kings III.
 
-Visit the [project page](https://ck2rpg.github.io) for more detailed information, a tutorial, code documentation and to see the tool in action.
+Visit the [project page](https://ahhiyawa.github.io) for more detailed information, a tutorial, code documentation and to see the tool in action.
 
 ## Project Status
 

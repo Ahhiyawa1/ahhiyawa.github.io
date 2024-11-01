@@ -30,13 +30,13 @@ function setSkinColorOnLocation(c, p) {
     if (p.y <= 2048) {
         y = p.y / 2048
     } else {
-        y = 1 - (p.y / 4096)
+        y = 1 - (p.y / 7168)
     }
     let x;
-    if (p.x <= 4096) {
-        x = 1 - (p.x / 4096);
+    if (p.x <= 7168) {
+        x = 1 - (p.x / 7168);
     } else {
-        x = p.x / 8192
+        x = p.x / 16384
     }
     let lowX = x - 0.1;
     if (lowX < 0.01) {

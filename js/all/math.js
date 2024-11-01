@@ -118,7 +118,7 @@ function generateHotspots() {
 
 function generateAutoHotspots() {
     let hotspots = []
-    let div = world.width / 8192;
+    let div = world.width / 16384;
 
     let continentCount = getRandomInt(3, 5);
     //bottom left

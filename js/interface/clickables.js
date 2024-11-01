@@ -777,7 +777,7 @@ function adjustLimits() {
   limits.temperate.lower = subTropicalUpper + 1;
   limits.temperate.upper = temperateUpper;
   limits.cold.lower = temperateUpper + 1;
-  limits.cold.upper = 4096; // Assuming the maximum limit is fixed
+  limits.cold.upper = 7168; // Assuming the maximum limit is fixed
   document.getElementById('tropicalUpper').value = limits.tropical.upper;
   document.getElementById('subTropicalUpper').value = limits.subTropical.upper;
   document.getElementById('temperateUpper').value = limits.temperate.upper
